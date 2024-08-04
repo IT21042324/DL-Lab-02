@@ -15,21 +15,16 @@ understand the code. Add the following text cell and the code cell to the notebo
 again.
 
     2.1. What happens when the number of hidden nodes increase?
+	When the number of hidden nodes was set to a lower value, the accuracy was low, in the 60% range. This suggests that the model might not be complex enough to capture the relevant information, potentially leading to underfitting. However, as the number of hidden layers increased, we observed substantial growth in prediction accuracy, while the error rate decreased. This indicates that the model is effectively capturing the necessary information from the input data, increasing model complexity.
 
-    When the number of hidden nodes were set to a lower number the accuracy was low (in the 60s). 
-    This could mean the model might not be complex enough to capture the relevant information potentially leading
-    to a case of underfitting. However when the number of hiddne layers increase we see a substantial amount
-    of growth in the prediction accuracy while the error kept reducing. 
-    This could mean the model is capturing the necessary relevant infor from the input data and the model complexity 
-    is high. However when the hidden nodes increased past a certain amount (>20) the accuracy of the model seems
-    to fluctuate in between 90 - 93% implying that the best cost has been achived within this range. However we do
-    not know if the model is overly complex which could lead it to overfitting. 
-    Meaning the model has to be tested with a test data and the correct number of hidden nodes has to be 
-    decided upon it
+	However, when the number of hidden nodes exceeded a certain threshold (greater than 20), the accuracy began to fluctuate between 90% and 93%. This implies that the optimal model complexity may have been achieved within this range. Despite this, it's uncertain whether the model is overly complex, which could lead to overfitting.
+
+	To address this, the model needs to be tested with a separate test dataset to assess its generalization performance. The appropriate number of hidden nodes should be determined based on the model's performance on this test data.
+
+
 
     2.2. Can you explain the pattern of the accuracy when the hidden nodes increase?
+	Initially, as the number of hidden layers increased from 2 to 4, the model's accuracy improved significantly, rising from 67% to 90%. However, further increasing the number of hidden layers (from 4 to 10, 10 to 20, 20 to 50, and 50 to 70 layers) did not lead to substantial improvements, with accuracy fluctuating between 90% and 94%.
 
-    (PLOT IS SHOWN IN THE NN_sample.ipynb file) Initially from 2-4 hidden layers, the accuracy would substantially increase
-    from 67% to 90%. Afterwards it reaches the minimum cost and any substantial increase in hidden layers(4-10, 10-20, 20-50, 50-70 hidden layers)
-    would not bring any significant change as accuracies would fluctuate between 90% to 94%.
+	This suggests that the model is achieving good training accuracy. However, adding more hidden layers may also increase the risk of overfitting due to the increased complexity of the model. Although training accuracy improves with more hidden units, the model's performance on unseen data is uncertain and could potentially be poor because of the added complexity.
 
